@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #f5f5f7;
+  --color-surface: rgba(255, 255, 255, 0.65);
+  --color-surface-highlight: rgba(255, 255, 255, 0.9);
+  --color-primary: #0071e3;
+  --color-accent: #2997ff;
+  --color-text-main: #1d1d1f;
+  --color-text-muted: #86868b;
+  --color-border: rgba(255, 255, 255, 0.4);
+  --color-status-up: #34c759;
+  --color-status-down: #ff3b30;
+  --font-main: 'Inter', system-ui, sans-serif;
+  --glass-blur: 40px;
+}
+
+.theme-terminal {
+  --color-bg: #000000;
+  --color-surface: #111111;
+  --color-surface-highlight: #1a1a1a;
+  --color-primary: #ff9500; /* Bloomberg Orange */
+  --color-accent: #00ff00; /* Terminal Green */
+  --color-text-main: #ffffff;
+  --color-text-muted: #cccccc;
+  --color-border: #333333;
+  --color-status-up: #00ff00;
+  --color-status-down: #ff3b30;
+  --font-main: 'JetBrains Mono', monospace;
+  --glass-blur: 0px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-textMain antialiased overflow-x-hidden min-h-screen transition-colors duration-500 font-sans;
+    font-family: var(--font-main);
+    background-image: radial-gradient(circle at top left, var(--color-surface-highlight) 0%, transparent 40%), radial-gradient(circle at bottom right, var(--color-bg) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+.theme-terminal body {
+  background-image: none;
+  background-color: var(--color-bg);
+}
+
+.apple-panel {
+  @apply bg-surface backdrop-blur-[var(--glass-blur)] border border-border flex-col flex overflow-hidden rounded-[2rem];
+  box-shadow: 0 8px 32px -8px rgba(0,0,0,0.08), inset 0 0 0 1px var(--color-border);
+}
+
+.theme-terminal .apple-panel {
+  @apply rounded-none border-[#333];
+  box-shadow: none;
+}
+
+.apple-panel-interactive {
+  @apply apple-panel hover:shadow-apple-hover hover:-translate-y-0.5 transition-all duration-300 ease-out cursor-pointer;
+}
+
+.theme-terminal .apple-panel-interactive:hover {
+  @apply bg-surfaceHighlight border-primary;
+  transform: none;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
