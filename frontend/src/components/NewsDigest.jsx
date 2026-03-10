@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, PlayCircle, Zap, X, MessageSquare, ArrowUpRight, ArrowDownRight, Minus } from 'lucide-react';
 
 const getRelativeTime = (timestamp) => {
@@ -34,10 +36,10 @@ const SentimentBadge = ({ sentiment, reasoning }) => {
 };
 
 const ReaderModal = ({ item, onClose }) => {
-    const [content, setContent] = React.useState(null);
-    const [loading, setLoading] = React.useState(true);
+    const [content, setContent] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const fetchContent = async () => {
             try {
                 const res = await fetch(`http://localhost:8000/api/reader?url=${encodeURIComponent(item.url)}`);
@@ -345,15 +347,15 @@ const SidePulseItem = ({ item, theme, onOpenReader }) => {
 };
 const NewsDigest = ({ insights, onDeepDive, theme }) => {
   const isTerminal = theme === 'terminal';
-  const [selectedItem, setSelectedItem] = React.useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
   
-  // Sort insights strictly by relevance (signal_strength) and then recency
-  const sortedInsights = [...insights].sort((a, b) => {
+  // Sort insights safely
+  const sortedInsights = Array.isArray(insights) ? [...insights].sort((a, b) => {
       if (b.signal_strength !== a.signal_strength) {
           return b.signal_strength - a.signal_strength;
       }
       return new Date(b.created_at) - new Date(a.created_at);
-  });
+  }) : [];
 
   if (!sortedInsights || sortedInsights.length === 0) return null;
 
