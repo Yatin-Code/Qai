@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Sidebar from './components/Sidebar';
 import NewsDigest from './components/NewsDigest';
+import IntelligenceFeed from './components/IntelligenceFeed';
 import DeepDiveModal from './components/DeepDiveModal';
 import MarketChartModal from './components/MarketChartModal';
 import MarketTicker from './components/MarketTicker';
@@ -47,25 +48,8 @@ function App() {
 
     fetchInsights();
 
-    // Set up Server-Sent Events (SSE) for Real-Time UI updates
-    if (activeCategory === 'dashboard') {
-        eventSource = new EventSource('http://localhost:8000/api/stream');
-        eventSource.onmessage = (event) => {
-            const newInsight = JSON.parse(event.data);
-            setInsights((prev) => {
-                // Prevent duplicates if already in state
-                if (prev.some(item => item.id === newInsight.id)) return prev;
-                return [newInsight, ...prev];
-            });
-        };
-        eventSource.onerror = () => {
-             console.error("SSE Connection Lost. Attempting reconnect...");
-             eventSource.close();
-        }
-    }
-
     return () => {
-        if (eventSource) eventSource.close();
+        // SSE is now handled inside IntelligenceFeed for better encapsulation
     };
   }, [activeCategory, timeframe]);
 
@@ -147,7 +131,17 @@ function App() {
             layout
             className="w-full mt-2"
           >
-            {!loading && <NewsDigest insights={insights} onDeepDive={setDeepDiveEntity} theme={theme} />}
+            {!loading && (
+              activeCategory === 'dashboard' || activeCategory === 'early_signals' ? (
+                <IntelligenceFeed 
+                  category={activeCategory} 
+                  timeframe={timeframe} 
+                  onDeepDive={setDeepDiveEntity} 
+                />
+              ) : (
+                <NewsDigest insights={insights} onDeepDive={setDeepDiveEntity} theme={theme} />
+              )
+            )}
           </motion.div>
 
         </div>
