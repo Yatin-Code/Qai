@@ -59,71 +59,78 @@ const ReaderModal = ({ item, onClose }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/40 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-xl"
             onClick={onClose}
         >
             <motion.div 
-                initial={{ scale: 0.95, y: 20 }}
+                initial={{ scale: 0.9, y: 40 }}
                 animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.95, y: 20 }}
-                className="w-full max-w-4xl max-h-[90vh] bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col relative"
+                exit={{ scale: 0.9, y: 40 }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="w-full max-w-5xl max-h-[90vh] bg-[#0a0a0a] border border-white/10 rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col relative text-white"
                 onClick={e => e.stopPropagation()}
             >
                 <button 
                     onClick={onClose}
-                    className="absolute top-6 right-6 p-3 rounded-full bg-black/5 hover:bg-black/10 transition-all z-10"
+                    className="absolute top-8 right-8 p-4 rounded-full bg-white/5 hover:bg-white/10 transition-all z-10 group border border-white/10"
                 >
-                    <X size={20} className="text-textMain" />
+                    <X size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
                 </button>
 
-                <div className="overflow-y-auto flex-1 p-8 md:p-12">
-                    <div className="max-w-2xl mx-auto">
-                        <div className="flex items-center gap-3 mb-6 text-[11px] font-black tracking-widest uppercase text-primary">
+                <div className="overflow-y-auto flex-1 p-8 md:p-20">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="flex items-center gap-4 mb-8 text-[11px] font-black tracking-[0.3em] uppercase text-primary">
                             <span>{item.sourceName}</span>
-                            <span className="text-textMuted">•</span>
-                            <span>{getRelativeTime(item.created_at)}</span>
+                            <div className="w-1 h-1 rounded-full bg-white/10" />
+                            <span className="text-white/40">Journal Entry</span>
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-textMain leading-[1.1] mb-8 font-display">
+                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[1.05] mb-12 font-display">
                             {item.title}
                         </h2>
 
-                        <div className="flex items-center gap-4 mb-10 pb-10 border-b border-black/5">
-                            <SentimentBadge sentiment={item.sentiment} reasoning={item.sentiment_reasoning} />
-                            {item.signal_strength && (
-                                <div className="text-[10px] font-black px-3 py-1 bg-primary/10 text-primary rounded-md uppercase tracking-widest">
-                                    SIGNAL {item.signal_strength}%
-                                </div>
-                            )}
+                        <div className="flex items-center gap-6 mb-16 pb-16 border-b border-white/10">
+                             <div className={`px-4 py-2 rounded-xl text-[11px] font-black uppercase tracking-widest ${
+                                item.sentiment?.toUpperCase() === 'BULLISH' ? 'bg-green-500 text-white' : 
+                                item.sentiment?.toUpperCase() === 'BEARISH' ? 'bg-red-500 text-white' : 'bg-white/5 text-white/40'
+                             }`}>
+                                {item.sentiment || 'Neutral'} Signal
+                             </div>
+                             <div className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
+                                Processing Confidence: {item.signal_strength}%
+                             </div>
                         </div>
 
                         {loading ? (
-                            <div className="space-y-4 animate-pulse">
-                                <div className="h-4 bg-black/5 rounded w-full"></div>
-                                <div className="h-4 bg-black/5 rounded w-5/6"></div>
-                                <div className="h-4 bg-black/5 rounded w-full"></div>
-                                <div className="h-4 bg-black/5 rounded w-4/5"></div>
+                            <div className="space-y-8 animate-pulse text-white/20">
+                                <div className="h-4 bg-white/5 rounded-full w-full"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-5/6"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-full"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-4/5"></div>
                             </div>
                         ) : (
-                            <div className="prose prose-lg max-w-none text-textMain/80 leading-relaxed font-serif">
+                            <div className="prose prose-2xl prose-invert max-w-none text-white/70 leading-relaxed font-serif selection:bg-primary/20">
                                 {content?.content ? (
                                     content.content.split('\n\n').map((para, i) => (
-                                        <p key={i} className="mb-6">{para}</p>
+                                        <p key={i} className="mb-10 first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:mt-3 first-letter:text-primary">{para}</p>
                                     ))
                                 ) : (
-                                    <p>Content extraction failed. Please visit the original source.</p>
+                                    <div className="py-20 text-center">
+                                        <p className="text-white/40 mb-8 italic">Journal synthesis incomplete. Accessing direct neural link recommended.</p>
+                                    </div>
                                 )}
                             </div>
                         )}
 
-                        <div className="mt-12 pt-12 border-t border-black/5 flex justify-center">
+                        <div className="mt-20 pt-20 border-t border-white/10 flex flex-col items-center gap-8 text-center text-white">
+                            <p className="text-white/40 text-xs font-medium max-w-sm">Deeply interested in this signal? Access the full documentation at the origin source.</p>
                             <a 
                                 href={item.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-full font-black uppercase tracking-widest text-xs hover:bg-primary transition-all group"
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-primary hover:text-white transition-all group shadow-xl hover:shadow-primary/20"
                             >
-                                Read Original Source <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                Open Neural Source <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
                         </div>
                     </div>
@@ -268,7 +275,7 @@ const TopStoryCard = ({ item, onDeepDive, theme, onOpenReader }) => {
         <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="flex flex-col group cursor-pointer apple-panel-interactive bg-white/40 border border-white/60 p-5 h-full relative overflow-hidden rounded-[2rem] hover:shadow-2xl transition-all"
+            className="flex flex-col group cursor-pointer bg-black/40 backdrop-blur-2xl border border-white/10 p-5 h-full relative overflow-hidden rounded-[2rem] hover:shadow-2xl transition-all"
             onClick={() => onOpenReader(item)}
         >
             {/* Media Container */}
@@ -323,21 +330,20 @@ const SidePulseItem = ({ item, theme, onOpenReader }) => {
 
     return (
         <div 
-            className="group cursor-pointer py-4 border-b border-black/[0.04] last:border-0 hover:bg-black/[0.02] px-2 -mx-2 rounded-xl transition-all flex gap-4"
+            className="group cursor-pointer py-4 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 -mx-2 rounded-xl transition-all flex gap-4 text-white"
             onClick={() => onOpenReader(item)}
         >
             <div className="flex-1 min-w-0 flex flex-col justify-center">
                 <div className="flex items-center gap-2 text-[9px] uppercase tracking-widest text-primary font-black mb-1">
                     <span>{item.sourceName || 'Scanner'}</span>
-                    <span className="text-textMuted">•</span>
-                    <span className="text-textMuted">{getRelativeTime(item.created_at)}</span>
+                    <span className="text-white/40">{getRelativeTime(item.created_at)}</span>
                     <SentimentBadge sentiment={item.sentiment} />
                 </div>
-                <h4 className="text-[14px] font-bold text-textMain leading-tight mb-1 group-hover:text-primary transition-colors line-clamp-2 font-display">
+                <h4 className="text-[14px] font-bold text-white leading-tight mb-1 group-hover:text-primary transition-colors line-clamp-2 font-display">
                     {item.title}
                 </h4>
                 {item.sentiment_reasoning && (
-                    <p className="text-[9px] text-textMuted line-clamp-1 italic mt-1 group-hover:text-textMain/70">
+                    <p className="text-[9px] text-white/40 line-clamp-1 italic mt-1 group-hover:text-white/60">
                         {item.sentiment_reasoning}
                     </p>
                 )}

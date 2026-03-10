@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #f5f5f7;
-  --color-surface: rgba(255, 255, 255, 0.65);
-  --color-surface-highlight: rgba(255, 255, 255, 0.9);
+  --color-bg: #050505;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-surface-highlight: rgba(255, 255, 255, 0.07);
   --color-primary: #0071e3;
   --color-accent: #2997ff;
-  --color-text-main: #1d1d1f;
+  --color-text-main: #ffffff;
   --color-text-muted: #86868b;
-  --color-border: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.1);
   --color-status-up: #34c759;
   --color-status-down: #ff3b30;
   --font-main: 'Inter', system-ui, sans-serif;
@@ -34,17 +34,12 @@
 
 @layer base {
   body {
-    @apply bg-background text-textMain antialiased overflow-x-hidden min-h-screen transition-colors duration-500 font-sans;
+    @apply bg-[#050505] text-white antialiased overflow-x-hidden min-h-screen font-sans;
     font-family: var(--font-main);
-    background-image: radial-gradient(circle at top left, var(--color-surface-highlight) 0%, transparent 40%), radial-gradient(circle at bottom right, var(--color-bg) 0%, transparent 50%);
-    background-attachment: fixed;
   }
 }
 
-.theme-terminal body {
-  background-image: none;
-  background-color: var(--color-bg);
-}
+/* Terminal theme is deprecated in favor of Cinematic Editorial */
 
 .apple-panel {
   @apply bg-surface backdrop-blur-[var(--glass-blur)] border border-border flex-col flex overflow-hidden rounded-[2rem];

@@ -82,7 +82,7 @@ const MarketChartModal = ({ onClose, initialSymbol = 'AAPL' }) => {
       const fillPoints = `${width},${height} 0,${height} ${points}`;
 
       return (
-          <div className="relative w-full overflow-hidden border border-neutral-800 bg-surface mt-8 rounded shadow-inner">
+          <div className="relative w-full overflow-hidden border border-white/10 bg-black/40 mt-8 rounded-2xl shadow-inner backdrop-blur-md">
               <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-64 block">
                 <defs>
                   <linearGradient id="gradGreen" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -105,39 +105,39 @@ const MarketChartModal = ({ onClose, initialSymbol = 'AAPL' }) => {
               </svg>
               
               {/* Crosshair High/Low Overlays */}
-              <div className="absolute top-4 left-4 text-[10px] font-mono font-bold tracking-widest uppercase px-2 py-1 bg-background border border-neutral-800 text-textMain shadow-md">
-                  1Y PEAK: <span className="text-green-500">${maxPrice.toFixed(2)}</span>
+              <div className="absolute top-4 left-4 text-[9px] font-black tracking-widest uppercase px-3 py-1 bg-white/5 border border-white/10 text-white/60 rounded-lg backdrop-blur-md">
+                  1Y PEAK: <span className="text-green-400 font-bold">${maxPrice.toFixed(2)}</span>
               </div>
-              <div className="absolute bottom-4 left-4 text-[10px] font-mono font-bold tracking-widest uppercase px-2 py-1 bg-background border border-neutral-800 text-textMain shadow-md">
-                  1Y FLOOR: <span className="text-red-500">${minPrice.toFixed(2)}</span>
+              <div className="absolute bottom-4 left-4 text-[9px] font-black tracking-widest uppercase px-3 py-1 bg-white/5 border border-white/10 text-white/60 rounded-lg backdrop-blur-md">
+                  1Y FLOOR: <span className="text-red-400 font-bold">${minPrice.toFixed(2)}</span>
               </div>
           </div>
       );
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        className="bg-surface border border-neutral-800 w-full max-w-4xl overflow-hidden relative shadow-[0_0_50px_rgba(0,0,0,0.9)]"
+        className="bg-[#0a0a0a] border border-white/10 w-full max-w-4xl overflow-hidden relative shadow-[0_40px_80px_rgba(0,0,0,0.8)] rounded-3xl text-white"
       >
-        <div className="p-4 border-b border-neutral-800 flex justify-between items-center bg-background">
-          <form onSubmit={handleSearch} className="flex items-center space-x-3 text-textMain font-mono text-sm w-3/4">
-            <Globe size={18} className="text-textMain animate-pulse" />
-            <div className="w-px h-6 bg-neutral-800"></div>
+        <div className="p-4 border-b border-white/10 flex justify-between items-center bg-white/5">
+          <form onSubmit={handleSearch} className="flex items-center space-x-3 text-white font-mono text-sm w-3/4">
+            <Globe size={18} className="text-primary animate-pulse" />
+            <div className="w-px h-6 bg-white/10"></div>
             <input 
                 type="text" 
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 placeholder="ENTER ANY GLOBAL TICKER (e.g. MSFT, IBM, COIN)..."
-                className="bg-transparent border-none outline-none flex-1 uppercase tracking-widest font-black text-textMain placeholder-neutral-600 focus:placeholder-transparent"
+                className="bg-transparent border-none outline-none flex-1 uppercase tracking-widest font-black text-white placeholder-white/20 focus:placeholder-transparent text-sm"
                 autoFocus
             />
             <button type="submit" className="hidden">SEARCH</button>
           </form>
-          <button onClick={onClose} className="text-textMuted hover:text-white transition-colors bg-surfaceHighlight p-1 border border-neutral-800">
+          <button onClick={onClose} className="text-white/40 hover:text-white transition-all bg-white/5 p-2 rounded-full border border-white/10">
             <X size={20} />
           </button>
         </div>
@@ -145,31 +145,31 @@ const MarketChartModal = ({ onClose, initialSymbol = 'AAPL' }) => {
         <div className="p-8 font-mono min-h-[450px] relative">
           <AnimatePresence mode="wait">
               {loading ? (
-                <motion.div key="loading" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="absolute inset-0 flex flex-col items-center justify-center space-y-4 bg-surface z-10">
-                   <div className="w-12 h-12 border-4 border border-neutral-800 border-t-textMain rounded-full animate-spin"></div>
-                   <span className="text-xs uppercase font-bold tracking-widest animate-pulse text-textMuted">Rerouting satellites to {symbol}...</span>
+                <motion.div key="loading" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="absolute inset-0 flex flex-col items-center justify-center space-y-4 bg-[#0a0a0a] z-10">
+                   <div className="w-12 h-12 border-4 border-white/10 border-t-primary rounded-full animate-spin"></div>
+                   <span className="text-[10px] uppercase font-black tracking-widest animate-pulse text-white/40">Rerouting satellites to {symbol}...</span>
                 </motion.div>
               ) : error ? (
-                <motion.div key="error" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="absolute inset-0 flex flex-col items-center justify-center space-y-4 bg-surface z-10">
-                    <div className="text-red-500 font-black text-xl tracking-widest uppercase bg-background px-6 py-4 border border-red-500 shadow-[0_0_20px_rgba(255,0,0,0.2)]">
+                <motion.div key="error" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="absolute inset-0 flex flex-col items-center justify-center space-y-4 bg-[#0a0a0a] z-10">
+                    <div className="text-red-500 font-black text-xl tracking-widest uppercase bg-white/5 px-8 py-6 border border-red-500 shadow-[0_0_30px_rgba(239,68,68,0.2)] rounded-2xl">
                         [!] {error}
                     </div>
                 </motion.div>
               ) : data ? (
-                <motion.div key="data" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="space-y-6">
-                   <div className="flex justify-between items-start border-l-4 border-textMain pl-4">
+                <motion.div key="data" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="space-y-10">
+                   <div className="flex justify-between items-start border-l-4 border-primary pl-6">
                        <div>
-                           <h2 className="text-5xl font-black tracking-tighter text-textMain drop-shadow-md">{data.symbol}</h2>
-                           <p className="text-sm text-textMuted uppercase tracking-widest mt-2 bg-background inline-block px-2 py-0.5 border border-neutral-800">{data.name}</p>
+                           <h2 className="text-6xl font-black tracking-tighter text-white drop-shadow-2xl">{data.symbol}</h2>
+                           <p className="text-[10px] text-white/40 uppercase font-black tracking-[0.2em] mt-3 bg-white/5 inline-block px-3 py-1 rounded-md border border-white/10">{data.name}</p>
                        </div>
                        <div className="text-right">
-                           <div className="flex items-center space-x-2 text-4xl font-mono text-textMain tabular-nums">
-                              <span className="text-textMuted text-xl">$</span> 
+                           <div className="flex items-center space-x-2 text-5xl font-black text-white tabular-nums tracking-tighter">
+                              <span className="text-white/20 text-2xl font-light">$</span> 
                               <span>{data.current_price.toFixed(2)}</span>
                            </div>
-                           <div className="text-xs text-textMuted uppercase tracking-widest mt-3 flex flex-col items-end">
-                               <span className="bg-surfaceHighlight px-2 border border-border">MARKET CAP</span>
-                               <span className="font-bold text-textMain mt-1">{data.market_cap !== 'N/A' ? `$${(data.market_cap / 1e9).toFixed(2)}B USD` : 'UNKNOWN CLASSIFICATION'}</span>
+                           <div className="text-[10px] text-white/40 uppercase font-black tracking-widest mt-4 flex flex-col items-end gap-2">
+                               <span className="bg-white/5 px-2 py-1 rounded border border-white/10">Market Capitalization</span>
+                               <span className="text-white mt-1 text-base">{data.market_cap !== 'N/A' ? `$${(data.market_cap / 1e9).toFixed(2)}B` : 'Unclassified'}</span>
                            </div>
                        </div>
                    </div>
@@ -177,9 +177,9 @@ const MarketChartModal = ({ onClose, initialSymbol = 'AAPL' }) => {
                    {/* Inject the custom SVG Data Graph */}
                    {renderChart()}
                    
-                   <div className="text-[10px] text-textMuted uppercase tracking-widest border-t border-neutral-800 pt-4 flex justify-between">
-                     <span className="flex items-center"><Search size={10} className="mr-2"/> LIVE GLOBAL CRAWLER ACTIVE</span>
-                     <span>YFINANCE DATA ROUTING</span>
+                   <div className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] border-t border-white/5 pt-8 flex justify-between">
+                     <span className="flex items-center gap-2"><Search size={12}/> Live Intelligence Loop Active</span>
+                     <span>Financial Telemtry v4.2</span>
                    </div>
                 </motion.div>
               ) : null}

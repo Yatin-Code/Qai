@@ -218,24 +218,24 @@ const EditorialItem = React.forwardRef(({ item, index, onDeepDive, onOpenReader 
 
         {/* Frosted Glass Content Panel */}
         <div className="mt-auto px-6 pb-8 z-10 transform transition-transform duration-700 group-hover:-translate-y-2">
-            <div className={`p-6 md:p-8 rounded-[2rem] bg-white/10 backdrop-blur-2xl border border-white/10 shadow-2xl ${isHero ? 'md:max-w-[90%]' : ''}`}>
+            <div className={`p-6 md:p-8 rounded-[2rem] bg-black/40 backdrop-blur-2xl border-t border-white/10 shadow-2xl ${isHero ? 'md:max-w-[90%]' : ''}`}>
                 <div className="flex flex-col gap-4">
                     <h2 className={`${isHero ? 'text-2xl md:text-3xl lg:text-4xl' : 'text-xl md:text-2xl'} font-black tracking-tighter text-white leading-[1.15] mb-1 drop-shadow-sm line-clamp-3`}>
                         {item.title}
                     </h2>
                     
-                    <p className={`text-white/80 leading-relaxed font-medium ${isHero ? 'text-sm md:text-base line-clamp-3' : 'text-xs md:text-sm line-clamp-2'}`}>
+                    <p className={`text-white/60 leading-relaxed font-dark ${isHero ? 'text-sm md:text-base line-clamp-3' : 'text-xs md:text-sm line-clamp-2'}`}>
                         {item.summary}
                     </p>
 
-                    <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                    <div className="flex items-center justify-between pt-2 border-t border-white/5">
                          <div className="flex gap-2">
                             {item.entities && item.entities.slice(0, 2).map(entity => (
-                                <span key={entity} className="text-[9px] font-black text-white/40 uppercase tracking-widest">#{entity}</span>
+                                <span key={entity} className="text-[9px] font-black text-white/30 uppercase tracking-widest">#{entity}</span>
                             ))}
                          </div>
                          <div className="flex items-center gap-2">
-                            {youtubeId && <PlayCircle size={16} className="text-white/40" />}
+                            {youtubeId && <PlayCircle size={16} className="text-white/20" />}
                             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-black text-[9px] font-black uppercase tracking-widest transition-transform hover:scale-105 active:scale-95">
                                 Read
                             </div>
@@ -292,70 +292,68 @@ const ReaderModal = ({ item, onClose }) => {
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.9, y: 40 }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="w-full max-w-5xl max-h-[90vh] bg-white rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col relative"
+                className="w-full max-w-5xl max-h-[90vh] bg-[#0a0a0a] border border-white/10 rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col relative text-white"
                 onClick={e => e.stopPropagation()}
             >
                 <button 
                     onClick={onClose}
-                    className="absolute top-8 right-8 p-4 rounded-full bg-black/5 hover:bg-black/10 transition-all z-10 group"
+                    className="absolute top-8 right-8 p-4 rounded-full bg-white/5 hover:bg-white/10 transition-all z-10 group border border-white/10"
                 >
-                    <X size={24} className="text-textMain group-hover:rotate-90 transition-transform duration-300" />
+                    <X size={24} className="text-white group-hover:rotate-90 transition-transform duration-300" />
                 </button>
 
                 <div className="overflow-y-auto flex-1 p-8 md:p-20">
                     <div className="max-w-3xl mx-auto">
                         <div className="flex items-center gap-4 mb-8 text-[11px] font-black tracking-[0.3em] uppercase text-primary">
                             <span>{item.sourceName}</span>
-                            <div className="w-1 h-1 rounded-full bg-black/10" />
-                            <span className="text-textMuted/60">Journal Entry</span>
+                            <div className="w-1 h-1 rounded-full bg-white/10" />
+                            <span className="text-white/40">Journal Entry</span>
                         </div>
 
-                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-textMain leading-[1.05] mb-12 font-display">
+                        <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-white leading-[1.05] mb-12 font-display">
                             {item.title}
                         </h2>
 
-                        <div className="flex items-center gap-6 mb-16 pb-16 border-b border-black/5">
+                        <div className="flex items-center gap-6 mb-16 pb-16 border-b border-white/10">
                              <div className={`px-4 py-2 rounded-xl text-[11px] font-black uppercase tracking-widest ${
                                 item.sentiment?.toUpperCase() === 'BULLISH' ? 'bg-green-500 text-white' : 
-                                item.sentiment?.toUpperCase() === 'BEARISH' ? 'bg-red-500 text-white' : 'bg-black/5 text-textMuted'
+                                item.sentiment?.toUpperCase() === 'BEARISH' ? 'bg-red-500 text-white' : 'bg-white/5 text-white/40'
                              }`}>
                                 {item.sentiment || 'Neutral'} Signal
                              </div>
-                             <div className="text-[11px] font-bold text-textMuted uppercase tracking-widest">
+                             <div className="text-[11px] font-bold text-white/40 uppercase tracking-widest">
                                 Processing Confidence: {item.signal_strength}%
                              </div>
                         </div>
 
                         {loading ? (
-                            <div className="space-y-8 animate-pulse">
-                                <div className="h-4 bg-black/5 rounded-full w-full"></div>
-                                <div className="h-4 bg-black/5 rounded-full w-5/6"></div>
-                                <div className="h-4 bg-black/5 rounded-full w-full"></div>
-                                <div className="h-4 bg-black/5 rounded-full w-4/5"></div>
-                                <div className="h-4 bg-black/5 rounded-full w-full"></div>
-                                <div className="h-4 bg-black/5 rounded-full w-3/4"></div>
+                            <div className="space-y-8 animate-pulse text-white/20">
+                                <div className="h-4 bg-white/5 rounded-full w-full"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-5/6"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-full"></div>
+                                <div className="h-4 bg-white/5 rounded-full w-4/5"></div>
                             </div>
                         ) : (
-                            <div className="prose prose-2xl max-w-none text-textMain/70 leading-relaxed font-serif selection:bg-primary/20">
+                            <div className="prose prose-2xl prose-invert max-w-none text-white/70 leading-relaxed font-serif selection:bg-primary/20">
                                 {content?.content ? (
                                     content.content.split('\n\n').map((para, i) => (
                                         <p key={i} className="mb-10 first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:mt-3 first-letter:text-primary">{para}</p>
                                     ))
                                 ) : (
                                     <div className="py-20 text-center">
-                                        <p className="text-textMuted mb-8 italic">Journal synthesis incomplete. Accessing direct neural link recommended.</p>
+                                        <p className="text-white/40 mb-8 italic">Journal synthesis incomplete. Accessing direct neural link recommended.</p>
                                     </div>
                                 )}
                             </div>
                         )}
 
-                        <div className="mt-20 pt-20 border-t border-black/5 flex flex-col items-center gap-8 text-center">
-                            <p className="text-textMuted text-xs font-medium max-w-sm">Deeply interested in this signal? Access the full documentation at the origin source.</p>
+                        <div className="mt-20 pt-20 border-t border-white/10 flex flex-col items-center gap-8 text-center text-white">
+                            <p className="text-white/40 text-xs font-medium max-w-sm">Deeply interested in this signal? Access the full documentation at the origin source.</p>
                             <a 
                                 href={item.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-3 px-10 py-5 bg-black text-white rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-primary transition-all group shadow-xl hover:shadow-primary/20"
+                                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black rounded-full font-black uppercase tracking-widest text-[11px] hover:bg-primary hover:text-white transition-all group shadow-xl hover:shadow-primary/20"
                             >
                                 Open Neural Source <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
