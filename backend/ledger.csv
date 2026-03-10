@@ -1,0 +1,106 @@
+name,url,category
+Apple Machine Learning,https://machinelearning.apple.com/feed.xml,TECH
+OpenAI Research,https://openai.com/blog/rss.xml,TECH
+DeepMind News,https://deepmind.google/blog/rss.xml,TECH
+Y Combinator News,https://news.ycombinator.com/rss,BUSINESS
+TechCrunch AI,https://techcrunch.com/category/artificial-intelligence/feed/,TECH
+SEC RSS News,https://www.sec.gov/news/pressreleases.rss,BUSINESS
+ArXiv AI,http://export.arxiv.org/rss/cs.AI,RESEARCH
+Netflix Engineering,https://netflix.github.io/feed.xml,TECH
+Netflix Blog,https://blog.netflix.com/rss,TECH
+Uber Engineering,https://uber.github.io/feed.xml,TECH
+Uber Blog,https://blog.uber.com/rss,TECH
+Spotify Engineering,https://spotify.github.io/feed.xml,TECH
+Spotify Blog,https://blog.spotify.com/rss,TECH
+Stripe Engineering,https://stripe.github.io/feed.xml,TECH
+Stripe Blog,https://blog.stripe.com/rss,TECH
+Airbnb Engineering,https://airbnb.github.io/feed.xml,TECH
+Airbnb Blog,https://blog.airbnb.com/rss,TECH
+Discord Engineering,https://discord.github.io/feed.xml,TECH
+Discord Blog,https://blog.discord.com/rss,TECH
+Twitch Engineering,https://twitch.github.io/feed.xml,TECH
+Twitch Blog,https://blog.twitch.com/rss,TECH
+Slack Engineering,https://slack.github.io/feed.xml,TECH
+Slack Blog,https://blog.slack.com/rss,TECH
+Zoom Engineering,https://zoom.github.io/feed.xml,TECH
+Zoom Blog,https://blog.zoom.com/rss,TECH
+Dropbox Engineering,https://dropbox.github.io/feed.xml,TECH
+Dropbox Blog,https://blog.dropbox.com/rss,TECH
+GitHub Engineering,https://github.github.io/feed.xml,TECH
+GitHub Blog,https://blog.github.com/rss,TECH
+GitLab Engineering,https://gitlab.github.io/feed.xml,TECH
+GitLab Blog,https://blog.gitlab.com/rss,TECH
+ArXiv cs.AR,http://export.arxiv.org/rss/cs.AR,RESEARCH
+ArXiv cs.CC,http://export.arxiv.org/rss/cs.CC,RESEARCH
+ArXiv cs.CE,http://export.arxiv.org/rss/cs.CE,RESEARCH
+ArXiv cs.CG,http://export.arxiv.org/rss/cs.CG,RESEARCH
+ArXiv cs.CL,http://export.arxiv.org/rss/cs.CL,RESEARCH
+ArXiv cs.CR,http://export.arxiv.org/rss/cs.CR,RESEARCH
+ArXiv cs.CV,http://export.arxiv.org/rss/cs.CV,RESEARCH
+ArXiv cs.CY,http://export.arxiv.org/rss/cs.CY,RESEARCH
+ArXiv cs.DB,http://export.arxiv.org/rss/cs.DB,RESEARCH
+ArXiv cs.DC,http://export.arxiv.org/rss/cs.DC,RESEARCH
+ArXiv cs.DL,http://export.arxiv.org/rss/cs.DL,RESEARCH
+ArXiv cs.DM,http://export.arxiv.org/rss/cs.DM,RESEARCH
+ArXiv cs.DS,http://export.arxiv.org/rss/cs.DS,RESEARCH
+ArXiv cs.ET,http://export.arxiv.org/rss/cs.ET,RESEARCH
+ArXiv cs.FL,http://export.arxiv.org/rss/cs.FL,RESEARCH
+ArXiv cs.GL,http://export.arxiv.org/rss/cs.GL,RESEARCH
+ArXiv cs.GR,http://export.arxiv.org/rss/cs.GR,RESEARCH
+ArXiv cs.GT,http://export.arxiv.org/rss/cs.GT,RESEARCH
+ArXiv cs.HC,http://export.arxiv.org/rss/cs.HC,RESEARCH
+ArXiv cs.IR,http://export.arxiv.org/rss/cs.IR,RESEARCH
+ArXiv cs.IT,http://export.arxiv.org/rss/cs.IT,RESEARCH
+ArXiv cs.LG,http://export.arxiv.org/rss/cs.LG,RESEARCH
+ArXiv cs.LO,http://export.arxiv.org/rss/cs.LO,RESEARCH
+ArXiv cs.MA,http://export.arxiv.org/rss/cs.MA,RESEARCH
+ArXiv cs.MM,http://export.arxiv.org/rss/cs.MM,RESEARCH
+ArXiv cs.MS,http://export.arxiv.org/rss/cs.MS,RESEARCH
+ArXiv cs.NA,http://export.arxiv.org/rss/cs.NA,RESEARCH
+ArXiv cs.NE,http://export.arxiv.org/rss/cs.NE,RESEARCH
+ArXiv cs.NI,http://export.arxiv.org/rss/cs.NI,RESEARCH
+ArXiv cs.OH,http://export.arxiv.org/rss/cs.OH,RESEARCH
+ArXiv cs.OS,http://export.arxiv.org/rss/cs.OS,RESEARCH
+ArXiv cs.PF,http://export.arxiv.org/rss/cs.PF,RESEARCH
+ArXiv cs.PL,http://export.arxiv.org/rss/cs.PL,RESEARCH
+ArXiv cs.RO,http://export.arxiv.org/rss/cs.RO,RESEARCH
+ArXiv cs.SC,http://export.arxiv.org/rss/cs.SC,RESEARCH
+ArXiv cs.SD,http://export.arxiv.org/rss/cs.SD,RESEARCH
+ArXiv cs.SE,http://export.arxiv.org/rss/cs.SE,RESEARCH
+ArXiv cs.SI,http://export.arxiv.org/rss/cs.SI,RESEARCH
+ArXiv cs.SY,http://export.arxiv.org/rss/cs.SY,RESEARCH
+ArXiv q-fin.CP,http://export.arxiv.org/rss/q-fin.CP,BUSINESS
+ArXiv q-fin.EC,http://export.arxiv.org/rss/q-fin.EC,BUSINESS
+ArXiv q-fin.GN,http://export.arxiv.org/rss/q-fin.GN,BUSINESS
+ArXiv q-fin.MF,http://export.arxiv.org/rss/q-fin.MF,BUSINESS
+ArXiv q-fin.PM,http://export.arxiv.org/rss/q-fin.PM,BUSINESS
+ArXiv q-fin.PR,http://export.arxiv.org/rss/q-fin.PR,BUSINESS
+ArXiv q-fin.RM,http://export.arxiv.org/rss/q-fin.RM,BUSINESS
+ArXiv q-fin.ST,http://export.arxiv.org/rss/q-fin.ST,BUSINESS
+ArXiv q-fin.TR,http://export.arxiv.org/rss/q-fin.TR,BUSINESS
+ArXiv econ.EM,http://export.arxiv.org/rss/econ.EM,BUSINESS
+ArXiv econ.GN,http://export.arxiv.org/rss/econ.GN,BUSINESS
+ArXiv econ.TH,http://export.arxiv.org/rss/econ.TH,BUSINESS
+Andrej Karpathy (X),https://nitter.poast.org/karpathy/rss,VIP
+OpenAI (X),https://nitter.poast.org/openai/rss,TECH
+Google AI (X),https://nitter.poast.org/GoogleAI/rss,TECH
+SpaceX (X),https://nitter.poast.org/SpaceX/rss,BUSINESS
+xAI (X),https://nitter.poast.org/xai/rss,TECH
+Elon Musk (X),https://nitter.poast.org/elonmusk/rss,VIP
+Yann LeCun (X),https://nitter.poast.org/ylecun/rss,VIP
+Lex Fridman Podcast,https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKgdpqLsnQQkIotA9iA,VIP
+Andrej Karpathy YouTube,https://www.youtube.com/feeds/videos.xml?channel_id=UCTwBFxFzgE0B1jP1D8Q3tqw,VIP
+Dwarkesh Podcast,https://www.youtube.com/feeds/videos.xml?channel_id=UCIWeEJEGlaXnksxV0XvV89A,VIP
+OpenAI YouTube,https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09Z4gjiCtzVjng,TECH
+Sam Altman (X),https://nitter.poast.org/sama/rss,VIP
+Demis Hassabis (X),https://nitter.poast.org/demishassabis/rss,VIP
+r/LocalLLaMA,https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day,TECH
+r/MachineLearning,https://www.reddit.com/r/MachineLearning/top/.rss?t=day,RESEARCH
+HuggingFace Daily Papers,https://huggingface.co/papers.rss,RESEARCH
+Ollama Blog,https://ollama.com/blog.rss,TECH
+Together AI Blog,https://www.together.ai/blog/rss.xml,TECH
+r/LocalLLaMA,https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day,TECH
+r/MachineLearning,https://www.reddit.com/r/MachineLearning/top/.rss?t=day,RESEARCH
+HuggingFace Daily Papers,https://huggingface.co/papers.rss,RESEARCH
+Ollama Blog,https://ollama.com/blog.rss,TECH
+Together AI Blog,https://www.together.ai/blog/rss.xml,TECH

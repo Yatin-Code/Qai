@@ -1,0 +1,10 @@
+ID: 313, Title: If you're using Nvidia's NVFP4, Signal: 20, Image: https://preview.redd.it/ta7jrf26l0og1.png?width=140&height=81&auto=webp&s=f8c40760dbcb25fda70f9b0ed4f60a077be21ac8
+ID: 312, Title: I gave my Minecraft bot a brai, Signal: 20, Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+ID: 311, Title: Code Review Dataset: 200k+ Cas, Signal: 20, Image: https://external-preview.redd.it/AJYrkM6OaoRlE2zemKLHANM8OWdNi67zA_69q4F_Ku4.png?width=640&crop=smart&auto=webp&s=ae02b6bf6e98c23dc3b82d05d63312a2dd841477
+ID: 310, Title: A few early (and somewhat vagu, Signal: 80, Image: https://preview.redd.it/vf4etpxwf3og1.png?width=140&height=86&auto=webp&s=3870060368a38dc4dd3d7e4727d5b579b1cb0121
+ID: 309, Title: HuggingFace have shared the Th, Signal: 20, Image: https://preview.redd.it/22jsfcdbe2og1.png?width=640&crop=smart&auto=webp&s=39a23d2e1ebeb6c0adc5940492182fce265c2760
+ID: 308, Title: Nvidia Is Planning to Launch a, Signal: 90, Image: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200
+ID: 307, Title: Evaluating Qwen3.5-35B & 122B , Signal: 20, Image: https://preview.redd.it/sdrb59wdv2og1.png?width=140&height=84&auto=webp&s=0a5fb6f633d9460dc94a396644c3046f4b1d59c3
+ID: 306, Title: Finally found a reason to use , Signal: 20, Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+ID: 305, Title: Anyone else feel like an outsi, Signal: 20, Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+ID: 304, Title: Will Gemma4 release soon?, Signal: 20, Image: https://external-preview.redd.it/6G4tRgO119NQXrMeYcjYVXK3hT3HLcmD1e48JkaGQN4.png?width=140&height=70&auto=webp&s=765b8c720a683a18e937c03b9e2ab5bbc8f0b370

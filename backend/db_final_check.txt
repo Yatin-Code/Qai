@@ -1,0 +1,151 @@
+Hero Stories (Signal >= 90): 16
+[20] If you're using Nvidia's NVFP4 of Qwen3.5-397, try a different quant
+Image: https://preview.redd.it/ta7jrf26l0og1.png?width=140&height=81&auto=webp&s=f8c40760dbcb25fda70f9b0ed4f60a077be21ac8
+---
+[20] I gave my Minecraft bot a brain with local Nemotron 9B — it follows orders like "chop that tree" and "guard me from zombies"
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[20] Code Review Dataset: 200k+ Cases of Human-Written Code Reviews from Top OSS Projects
+Image: https://external-preview.redd.it/AJYrkM6OaoRlE2zemKLHANM8OWdNi67zA_69q4F_Ku4.png?width=640&crop=smart&auto=webp&s=ae02b6bf6e98c23dc3b82d05d63312a2dd841477
+---
+[80] A few early (and somewhat vague) LLM benchmark comparisons between the M5 Max Macbook Pro and other laptops - Hardware Canucks
+Image: https://preview.redd.it/vf4etpxwf3og1.png?width=140&height=86&auto=webp&s=3870060368a38dc4dd3d7e4727d5b579b1cb0121
+---
+[20] HuggingFace have shared the The Synthetic Data Playbook
+Image: https://preview.redd.it/22jsfcdbe2og1.png?width=640&crop=smart&auto=webp&s=39a23d2e1ebeb6c0adc5940492182fce265c2760
+---
+[90] Nvidia Is Planning to Launch an Open-Source AI Agent Platform
+Image: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200
+---
+[20] Evaluating Qwen3.5-35B & 122B on Strix Halo: Bartowski vs. Unsloth UD-XL Performance and Logic Stability
+Image: https://preview.redd.it/sdrb59wdv2og1.png?width=140&height=84&auto=webp&s=0a5fb6f633d9460dc94a396644c3046f4b1d59c3
+---
+[20] Finally found a reason to use local models 😭
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] Anyone else feel like an outsider when AI comes up with family and friends?
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] Will Gemma4 release soon?
+Image: https://external-preview.redd.it/6G4tRgO119NQXrMeYcjYVXK3hT3HLcmD1e48JkaGQN4.png?width=140&height=70&auto=webp&s=765b8c720a683a18e937c03b9e2ab5bbc8f0b370
+---
+[20] karpathy / autoresearch
+Image: https://external-preview.redd.it/xKXzPuE4eTJPgPzTlgSEQrs0gXIOL5rYUymaryAIbSw.png?width=640&crop=smart&auto=webp&s=0b7a627f1557c6b26e1d032e1a33dd6e7079e5ea
+---
+[20] Qwen-3.5-27B-Derestricted
+Image: https://external-preview.redd.it/CxQNGRk-QduEaki0MVROJ-V9BSvi4PXBFNKOK-2MQ2A.png?width=640&crop=smart&auto=webp&s=16619b0d6562d5f301009bd71052a029d906be43
+---
+[20] Genuinely curious what doors the M5 Ultra will open
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] I am not saying it's Gemma 4, but maybe it's Gemma 4?
+Image: https://preview.redd.it/kdi0w1xxk2og1.png?width=640&crop=smart&auto=webp&s=911ba8514bb2392e41f4b92dcb996e3117888fdd
+---
+[80] Fine-tuned Qwen3 SLMs (0.6-8B) beat frontier LLMs on narrow tasks
+Image: https://preview.redd.it/2hh92dguq0og1.png?width=640&crop=smart&auto=webp&s=6888d0f4e184970154d3ef3cc25332e88152694f
+---
+[80] Launch HN: Terminal Use (YC W26) – Vercel for filesystem-based agents
+Image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200
+---
+[70] Claude Code, Claude Cowork and Codex #5
+Image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200
+---
+[20] Lotus 1-2-3 on the PC with DOS
+Image: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200
+---
+[70] GPT-5.3 Instant: Smoother, more useful everyday conversations
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: meta-llama/Llama-3.2-1B-Instruct
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: meta-llama/Llama-3.2-3B-Instruct
+Image: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-32B
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: openai/gpt-oss-120b
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-Embedding-0.6B
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: dphn/dolphin-2.9.1-yi-1.5-34b
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: vikhyatk/moondream2
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-4B
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen2.5-0.5B-Instruct
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[100] HF Model: trl-internal-testing/tiny-Qwen2ForCausalLM-2.5
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: facebook/opt-125m
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-1.7B
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-8B
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen2.5-3B-Instruct
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: meta-llama/Llama-3.1-8B-Instruct
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: openai/gpt-oss-20b
+Image: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen2.5-1.5B-Instruct
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[90] HF Model: openai-community/gpt2
+Image: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen3-0.6B
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[40] HF Model: Qwen/Qwen2.5-7B-Instruct
+Image: https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&q=80&w=1200
+---
+[20] Hacker News
+Image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200
+---
+[20] RVA23 Ends Speculation's Monopoly in RISC-V CPUs
+Image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200
+---
+[20] Optimizing inference speed and costs: Lessons learned from large-scale deployments
+Image: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200
+---
+[80] DSGym: A holistic framework for evaluating and training data science agents
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b27fb0ac01cea0678e6_697313b689cedf3c81f3eadf_DGGym-Carousel.png
+---
+[20] Together Evaluations now supports comparing top commercial APIs vs. open source models
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[100] Fine-tuning open LLM judges to outperform GPT-5.2
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[20] Together AI welcomes Alon Gavrielov as VP of Infrastructure Strategy
+Image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200
+---
+[20] Rime Arcana V3 Turbo and Rime Arcana V3 now available on Together AI
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b24166392214f69761a_698374f93b17bb8e47c41014_202624_Rime_Social_1080x1080.png
+---
+[80] What do LLMs think when you don't tell them what to think about?
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] Introducing Dedicated Container Inference:  Delivering 2.6x faster inference for custom AI models
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[20] Consistency diffusion language models: Up to 14x faster inference without sacrificing quality
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b27e4b6730f9f46bcaa_698c269bd185dc488ea8c517_CPD%2520Carousel%2520from%2520Together.ai.jpeg
+---

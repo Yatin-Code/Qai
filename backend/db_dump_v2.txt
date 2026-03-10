@@ -1,0 +1,126 @@
+DB Dump V2
+=============
+Insights with Images Count: 41
+[20] If you're using Nvidia's NVFP4 of Qwen3.5-397, try a different quant
+Image: https://preview.redd.it/ta7jrf26l0og1.png?width=140&height=81&auto=webp&s=f8c40760dbcb25fda70f9b0ed4f60a077be21ac8
+---
+[20] I gave my Minecraft bot a brain with local Nemotron 9B — it follows orders like "chop that tree" and "guard me from zombies"
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[20] Code Review Dataset: 200k+ Cases of Human-Written Code Reviews from Top OSS Projects
+Image: https://external-preview.redd.it/AJYrkM6OaoRlE2zemKLHANM8OWdNi67zA_69q4F_Ku4.png?width=640&crop=smart&auto=webp&s=ae02b6bf6e98c23dc3b82d05d63312a2dd841477
+---
+[80] A few early (and somewhat vague) LLM benchmark comparisons between the M5 Max Macbook Pro and other laptops - Hardware Canucks
+Image: https://preview.redd.it/vf4etpxwf3og1.png?width=140&height=86&auto=webp&s=3870060368a38dc4dd3d7e4727d5b579b1cb0121
+---
+[20] HuggingFace have shared the The Synthetic Data Playbook
+Image: https://preview.redd.it/22jsfcdbe2og1.png?width=640&crop=smart&auto=webp&s=39a23d2e1ebeb6c0adc5940492182fce265c2760
+---
+[90] Nvidia Is Planning to Launch an Open-Source AI Agent Platform
+Image: https://external-preview.redd.it/7kdy-7gv-O9IurM0nsCsVj7jjVr2X0chsdWQ20h_oxY.jpeg?width=640&crop=smart&auto=webp&s=f8a03a5fd6a1da67bf32b3140316e1f32461ec62
+---
+[20] Evaluating Qwen3.5-35B & 122B on Strix Halo: Bartowski vs. Unsloth UD-XL Performance and Logic Stability
+Image: https://preview.redd.it/sdrb59wdv2og1.png?width=140&height=84&auto=webp&s=0a5fb6f633d9460dc94a396644c3046f4b1d59c3
+---
+[20] Finally found a reason to use local models 😭
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] Anyone else feel like an outsider when AI comes up with family and friends?
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] Will Gemma4 release soon?
+Image: https://external-preview.redd.it/6G4tRgO119NQXrMeYcjYVXK3hT3HLcmD1e48JkaGQN4.png?width=140&height=70&auto=webp&s=765b8c720a683a18e937c03b9e2ab5bbc8f0b370
+---
+[20] karpathy / autoresearch
+Image: https://external-preview.redd.it/xKXzPuE4eTJPgPzTlgSEQrs0gXIOL5rYUymaryAIbSw.png?width=640&crop=smart&auto=webp&s=0b7a627f1557c6b26e1d032e1a33dd6e7079e5ea
+---
+[20] Qwen-3.5-27B-Derestricted
+Image: https://external-preview.redd.it/CxQNGRk-QduEaki0MVROJ-V9BSvi4PXBFNKOK-2MQ2A.png?width=640&crop=smart&auto=webp&s=16619b0d6562d5f301009bd71052a029d906be43
+---
+[20] Genuinely curious what doors the M5 Ultra will open
+Image: https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200
+---
+[20] I am not saying it's Gemma 4, but maybe it's Gemma 4?
+Image: https://preview.redd.it/kdi0w1xxk2og1.png?width=640&crop=smart&auto=webp&s=911ba8514bb2392e41f4b92dcb996e3117888fdd
+---
+[80] Fine-tuned Qwen3 SLMs (0.6-8B) beat frontier LLMs on narrow tasks
+Image: https://preview.redd.it/2hh92dguq0og1.png?width=640&crop=smart&auto=webp&s=6888d0f4e184970154d3ef3cc25332e88152694f
+---
+[80] Launch HN: Terminal Use (YC W26) – Vercel for filesystem-based agents
+Image: https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200
+---
+[70] Claude Code, Claude Cowork and Codex #5
+Image: https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200
+---
+[20] Lotus 1-2-3 on the PC with DOS
+Image: https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1200
+---
+[70] GPT-5.3 Instant: Smoother, more useful everyday conversations
+Image: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200
+---
+[80] DSGym: A holistic framework for evaluating and training data science agents
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b27fb0ac01cea0678e6_697313b689cedf3c81f3eadf_DGGym-Carousel.png
+---
+[20] Rime Arcana V3 Turbo and Rime Arcana V3 now available on Together AI
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b24166392214f69761a_698374f93b17bb8e47c41014_202624_Rime_Social_1080x1080.png
+---
+[20] Consistency diffusion language models: Up to 14x faster inference without sacrificing quality
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b27e4b6730f9f46bcaa_698c269bd185dc488ea8c517_CPD%2520Carousel%2520from%2520Together.ai.jpeg
+---
+[20] How speech models fail where it matters the most and what to do about it
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b25dfc2264508309b8f_699c923fbf6c32f950afef36_How%2520Speech%2520Models%2520Fail%2520Carousel.png
+---
+[80] CoderForge-Preview: SOTA open dataset for training efficient coding agents
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b249316bdc90ac3ce75_6876922781888597bd8e0dd0_DeepSeek-B200-Carousel.png
+---
+[80] Cache-aware prefill–decode disaggregation (CPD) for up to 40% faster long-context LLM serving
+Image: https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/699e0b27e4b6730f9f46bcaa_698c269bd185dc488ea8c517_CPD%2520Carousel%2520from%2520Together.ai.jpeg
+---
+[30] Deepening our partnership with the UK AI Security Institute
+Image: https://lh3.googleusercontent.com/AMN7wwGsZm8pTcW-nitk9SkxhXFSiFV4aM44e4NzZlbm0MgdLCUYrhsW312j9DpOvtiBv9COlSOTf90tsFp0FuBQ_ggpm-ft4IZrtPo95uC8B73mgw=w528-h297-n-nu-rw-lo
+---
+[70] Improved Gemini audio models for powerful voice experiences
+Image: https://lh3.googleusercontent.com/cJcAt2SxY4kjrZw_0k3hRQXJo81A-BhMUGWVnNVR0Uy8-ieIlWZyID9gRpioFGH1P9ODTf5rd3--9jJ9vUOnAM969Sprqbj0Sg6-RW87Ll_XPJw-_g=w528-h297-n-nu-rw-lo
+---
+[20] Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior
+Image: https://lh3.googleusercontent.com/6xaDTQdD_X-XOnyaiOJyIeZrXSldI98ijQCzxNqtmlQvsl-Qy6B3qUQIbCnkY2Cfa2AV4hNwo7UV2wzZ6mG1O5q0tfBfYSGZhOH1Cpp7AKfApuY1=w528-h297-n-nu-rw-lo
+---
+[70] Gemini 3 Flash: frontier intelligence built for speed
+Image: https://lh3.googleusercontent.com/6RPdrvGOHnyvo4twPwkjLRiZ37xYNnjBm6YyAp3Q52T-hJcOSNLzS7ErxFMV64G4Ir4yMLpKCxJ9amMQaNq01GpSwusn1i7JM1UVwQ47FqPuOCRUYg=w528-h297-n-nu-rw-lo
+---
+[20] Google's year in review: 8 areas with research breakthroughs in 2025
+Image: https://lh3.googleusercontent.com/CKYdTuHZvo3suDXuWRQfFRfWZdWC3ahrFgIB7eTfGc1zJTcfwiFGNR9WEKRZHrpf8thov-uMXgW1fMYCcIot1NqvvmwBkZFhu7azK0sIlzr0tlBZ9A=w528-h297-n-nu-rw-lo
+---
+[20] Veo 3.1 Ingredients to Video: More consistency, creativity and control
+Image: https://lh3.googleusercontent.com/PfhcT9uJ6J5kHhhqYkeW2gP7Ae-Oj74cyXy7rK9urd9IrVCTZcyF8poHTklbLZXYH4TTNJ22N-NgABm9hA_0AybulGLtmTQSA85OqKyWdThLc-S095s=w528-h297-n-nu-rw-lo
+---
+[20] D4RT: Teaching AI to see the world in four dimensions
+Image: https://lh3.googleusercontent.com/ozG6v7VcBOV2eYZ8TnGTAe1Z-7EjkNiBPHxdQEG1wy_F5QwRN_4IJ_jJYMNQiOMHEWyNMZg3tmC00bzGQX0IYfXHMVuoQS6OLptEV-H6CUpIOnWOaQ=w528-h297-n-nu-rw-lo
+---
+[20] Project Genie: Experimenting with infinite, interactive worlds
+Image: https://lh3.googleusercontent.com/g1e5YBOfHlTTVhsysCBrfpB_kVz2HZf2MUyvKmA_GkGPil0NridDLi-Iy5qz3EbmG_dB7OhzqEWUHsZMRTkb4bjtUPeFovOGi6zG1di9UTHFGDXLw7A=w528-h297-n-nu-rw-lo
+---
+[70] Accelerating Mathematical and Scientific Discovery with Gemini Deep Think
+Image: https://lh3.googleusercontent.com/bbLVCxqhbnzzj_eIy29oKJigrlL6m4ewSwfCK-sNKVI0l1StFklsEADVPHXtTw9YorgOeIiQmM8vzmM3LBRyKu0pQeMHK4pzA_r4oIVjB_5dj8DU=w528-h297-n-nu-rw-lo
+---
+[70] Gemini 3 Deep Think: Advancing science, research and engineering
+Image: https://lh3.googleusercontent.com/RlrY06Cc3MLbXna5gqMdx9jpY1yDikXD5v5qOFSgfDsnXOR71u3s1_dh6hWimLrEybCkyGyqazG6UF2DWrK4F52tVpdaf9amz5R-ZgJQ7uogoSuo-g=w528-h297-n-nu-rw-lo
+---
+[20] Accelerating discovery in India through AI-powered science and education
+Image: https://lh3.googleusercontent.com/YElycD2T8J2GDnFczuvtRJbPHGUMWPZiT-sLhQdv0ngl9hX0-Y4-KsOWaQxpUuwBCLrjW0FnWncfwgVP6TySgyUPjqyqd7x4czAJbGrRvTlhiV87sA=w528-h297-n-nu-rw-lo
+---
+[70] A new way to express yourself: Gemini can now create music
+Image: https://lh3.googleusercontent.com/WaabCY2Z_smMKiEvzihBKsLEg8g8pNqP_TIy1il9bQGD1zbwwoyAjwawnHB5WRpqyeozc4kiNDFTJY1UTbvoia-FwMM8rI9LPVmt3ESbzKAcDf5j=w528-h297-n-nu-rw-lo
+---
+[70] Gemini 3.1 Pro: A smarter model for your most complex tasks
+Image: https://lh3.googleusercontent.com/bZ8aFD7yMP8ue-XfAwrEMPDLgVua4ThZvdZu9mFYcsQTk0QVfc_kd2ygbXCCmTOR6dTvw6FhCkzc55j7-rUW_cYHnsOzmPHrzzJqDLTCCrhnCrOQkg=w528-h297-n-nu-rw-lo
+---
+[20] Nano Banana 2: Combining Pro capabilities with lightning-fast speed
+Image: https://lh3.googleusercontent.com/uzAd6nlnEh3lSFyE5Ay-1tvY6xesJLBuPucsK64LfxUwhMk5odcsyH-pAaIKRDVh1PniKOsihrha1qqspCc2f3CgPv61TSgTReKWdUlPiavUkH3R8lM=w528-h297-n-nu-rw-lo
+---
+[70] Gemini 3.1 Flash-Lite: Built for intelligence at scale
+Image: https://lh3.googleusercontent.com/L943nW-XsLGjzWrBOj8x7RhlajW6yigzhd8q45ia33L0uNyClu_XT600bTZevv5c2end6MZ5dFKekGXGMjfxIsYCdlqYlcnyNEmAy4Gd0B6Ovd6Z=w528-h297-n-nu-rw-lo
+---
+[50] Direct Test
+Image: https://placehold.co/600x400
+---
