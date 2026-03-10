@@ -30,7 +30,13 @@ def get_db_connection():
     return conn
 
 @app.get("/api/insights")
-def get_insights(category: Optional[str] = None, is_mainstream: Optional[bool] = None, timeframe: Optional[str] = None):
+def get_insights(
+    category: Optional[str] = None, 
+    is_mainstream: Optional[bool] = None, 
+    timeframe: Optional[str] = None,
+    limit: int = 50,
+    offset: int = 0
+):
     """
     Returns the latest processed insights.
     If category is provided, filters by category.
@@ -68,7 +74,8 @@ def get_insights(category: Optional[str] = None, is_mainstream: Optional[bool] =
     if conditions:
         query += ' WHERE ' + ' AND '.join(conditions)
             
-    query += ' ORDER BY i.created_at DESC LIMIT 500'
+    query += ' ORDER BY i.created_at DESC LIMIT ? OFFSET ?'
+    params.extend([limit, offset])
     cursor.execute(query, tuple(params))
         
     rows = cursor.fetchall()

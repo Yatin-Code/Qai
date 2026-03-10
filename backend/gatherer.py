@@ -94,6 +94,14 @@ def gather_data():
                         if not clean_text:
                             clean_text = entry.get('title', '')
                         
+                        # Check if URL already exists in insights to save credits
+                        conn_check = get_db_connection()
+                        exists = conn_check.execute('SELECT 1 FROM insights WHERE url = ?', (entry.get('link', url),)).fetchone()
+                        conn_check.close()
+                        
+                        if exists:
+                            continue
+
                         gathered_items.append({
                             'source_id': source['id'],
                             'url': entry.get('link', url),
@@ -108,6 +116,14 @@ def gather_data():
             # Complex JS-Heavy Websites (Playwright headless Chromium)
             else:
                 try:
+                    # Check if URL already exists in insights to save credits
+                    conn_check = get_db_connection()
+                    exists = conn_check.execute('SELECT 1 FROM insights WHERE url = ?', (url,)).fetchone()
+                    conn_check.close()
+                    
+                    if exists:
+                        continue
+
                     page.goto(url, timeout=15000, wait_until="domcontentloaded")
                     html = page.content()
                     soup = BeautifulSoup(html, "html.parser")

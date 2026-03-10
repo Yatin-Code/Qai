@@ -1,32 +1,128 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, ChevronDown, ChevronUp, PlayCircle, Activity, Zap } from 'lucide-react';
+import { ExternalLink, ChevronDown, PlayCircle, Zap, Loader2 } from 'lucide-react';
 
-const IntelligenceFeed = ({ insights, onDeepDive }) => {
-  // Sort insights strictly by relevance (signal_strength) and then recency
-  const sortedInsights = [...insights].sort((a, b) => {
-      if (b.signal_strength !== a.signal_strength) {
-          return b.signal_strength - a.signal_strength;
+const IntelligenceFeed = ({ category = 'dashboard', timeframe = 'week', onDeepDive }) => {
+  const [insights, setInsights] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const [offset, setOffset] = useState(0);
+  const observer = useRef();
+  const limit = 20;
+
+  // 1. Initial Load & Infinite Scroll Appending
+  const fetchEntries = useCallback(async (isInitial = false) => {
+    if (loading || (!hasMore && !isInitial)) return;
+    
+    setLoading(true);
+    const currentOffset = isInitial ? 0 : offset;
+    
+    try {
+      let url = `http://localhost:8000/api/insights?limit=${limit}&offset=${currentOffset}&timeframe=${timeframe}`;
+      if (category !== 'dashboard') {
+          if (category === 'early_signals') url += `&is_mainstream=false`;
+          else url += `&category=${category}`;
       }
-      return new Date(b.created_at) - new Date(a.created_at);
-  });
+
+      const response = await fetch(url);
+      const data = await response.json();
+      
+      if (data.length < limit) setHasMore(false);
+      
+      setInsights(prev => {
+        const existingIds = new Set(prev.map(i => i.id));
+        const filteredNew = data.filter(item => !existingIds.has(item.id));
+        return isInitial ? data : [...prev, ...filteredNew];
+      });
+      
+      setOffset(prev => isInitial ? data.length : prev + data.length);
+    } catch (err) {
+      console.error("Fetch error:", err);
+    } finally {
+      setLoading(false);
+    }
+  }, [offset, loading, hasMore, category, timeframe]);
+
+  // 2. Observer for Infinite Scroll
+  const lastElementRef = useCallback(node => {
+    if (loading) return;
+    if (observer.current) observer.current.disconnect();
+    
+    observer.current = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && hasMore) {
+        fetchEntries();
+      }
+    });
+    if (node) observer.current.observe(node);
+  }, [loading, hasMore, fetchEntries]);
+
+  // 3. Effect: Initial Load
+  useEffect(() => {
+    setOffset(0);
+    setHasMore(true);
+    setInsights([]);
+    fetchEntries(true);
+  }, [category, timeframe]);
+
+  // 4. SSE Stream for Live Prepending
+  useEffect(() => {
+    const eventSource = new EventSource('http://localhost:8000/api/stream');
+    
+    eventSource.onmessage = (event) => {
+      const newInsight = JSON.parse(event.data);
+      setInsights(prev => {
+        // Prevent duplicates
+        if (prev.some(item => item.id === newInsight.id)) return prev;
+        return [newInsight, ...prev];
+      });
+      // Adjust offset because we prepended an item
+      setOffset(prev => prev + 1);
+    };
+
+    eventSource.onerror = () => {
+      console.error("SSE Connection Error. Attempting reconnect...");
+      eventSource.close();
+    };
+
+    return () => eventSource.close();
+  }, []);
 
   return (
     <div className="w-full flex flex-col gap-3 pb-20">
-      {sortedInsights.map((item, index) => (
-         <FeedItem key={item.id} item={item} index={index} onDeepDive={onDeepDive} />
-      ))}
+      <AnimatePresence mode="popLayout">
+        {insights.map((item, index) => (
+           <FeedItem 
+            key={item.id} 
+            item={item} 
+            index={index} 
+            onDeepDive={onDeepDive} 
+            ref={index === insights.length - 1 ? lastElementRef : null}
+           />
+        ))}
+      </AnimatePresence>
+      
+      {loading && (
+        <div className="flex justify-center p-8">
+            <Loader2 className="animate-spin text-primary" size={24} />
+        </div>
+      )}
+      
+      {!hasMore && insights.length > 0 && (
+        <div className="text-center py-10 text-textMuted text-xs font-bold uppercase tracking-widest opacity-50">
+           End of Intelligence Feed
+        </div>
+      )}
     </div>
   );
 };
 
-const FeedItem = ({ item, index, onDeepDive }) => {
+const FeedItem = React.forwardRef(({ item, index, onDeepDive }, ref) => {
    const [isExpanded, setIsExpanded] = useState(false);
    const isHighlyRelevant = item.signal_strength > 70;
    
    const getRelativeTime = (timestamp) => {
         if (!timestamp) return 'Live';
-        const date = new Date(timestamp + 'Z'); 
+        const date = new Date(timestamp.includes('Z') ? timestamp : timestamp + 'Z'); 
         const now = new Date();
         const diffMins = Math.floor((now - date) / 60000);
         if (diffMins < 60) return `${Math.max(1, diffMins)}m`;
@@ -46,9 +142,11 @@ const FeedItem = ({ item, index, onDeepDive }) => {
 
    return (
      <motion.div 
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: Math.min(index * 0.05, 0.4), duration: 0.4, ease: "easeOut" }}
+        ref={ref}
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.3 }}
         className={`apple-panel-interactive flex flex-col overflow-hidden relative ${isExpanded ? 'bg-white/80 shadow-md ring-1 ring-primary/20' : 'bg-white/40 shadow-sm'} ${isHighlyRelevant ? 'border-l-4 border-l-primary' : 'border border-white/50'}`}
      >
         {isHighlyRelevant && (
@@ -167,6 +265,7 @@ const FeedItem = ({ item, index, onDeepDive }) => {
         </AnimatePresence>
      </motion.div>
    );
-};
+});
 
 export default IntelligenceFeed;
+
