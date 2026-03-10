@@ -47,7 +47,7 @@ def get_insights(
     cursor = conn.cursor()
     
     query = '''
-        SELECT i.id, i.title, i.summary, i.url, i.category, i.signal_strength, i.is_mainstream, i.image_url, i.is_breaking, i.vip_quote, i.processed_by, i.sentiment, i.entities, i.created_at, s.name as sourceName
+        SELECT i.id, i.title, i.summary, i.url, i.category, i.signal_strength, i.is_mainstream, i.image_url, i.is_breaking, i.vip_quote, i.processed_by, i.sentiment, i.sentiment_reasoning, i.entities, i.created_at, s.name as sourceName
         FROM insights i
         LEFT JOIN sources s ON i.source_id = s.id
     '''
@@ -120,7 +120,7 @@ async def stream_insights(request: Request):
             conn = get_db_connection()
             cursor = conn.cursor()
             cursor.execute('''
-                SELECT i.id, i.title, i.summary, i.url, i.category, i.signal_strength, i.is_mainstream, i.image_url, i.is_breaking, i.vip_quote, i.processed_by, i.sentiment, i.entities, i.created_at, s.name as sourceName
+                SELECT i.id, i.title, i.summary, i.url, i.category, i.signal_strength, i.is_mainstream, i.image_url, i.is_breaking, i.vip_quote, i.processed_by, i.sentiment, i.sentiment_reasoning, i.entities, i.created_at, s.name as sourceName
                 FROM insights i
                 LEFT JOIN sources s ON i.source_id = s.id
                 WHERE i.id > ?

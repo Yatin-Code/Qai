@@ -178,6 +178,34 @@ const FeedItem = React.forwardRef(({ item, index, onDeepDive }, ref) => {
                    <span className="text-primary truncate max-w-[150px]">{item.sourceName || 'Scanner'}</span>
                    <span className="w-1 h-1 rounded-full bg-black/10"></span>
                    <span>{getRelativeTime(item.created_at)}</span>
+                   
+                   {/* NEW SENTIMENT BADGE */}
+                   {item.sentiment && (
+                       <>
+                           <span className="w-1 h-1 rounded-full bg-black/10"></span>
+                           <div className="group relative flex items-center cursor-help">
+                               <span className="mr-1">
+                                   {item.sentiment.toUpperCase() === 'BULLISH' ? '🟢' : 
+                                    item.sentiment.toUpperCase() === 'BEARISH' ? '🔴' : '⚪'}
+                               </span>
+                               <span className={
+                                   item.sentiment.toUpperCase() === 'BULLISH' ? 'text-green-600' : 
+                                   item.sentiment.toUpperCase() === 'BEARISH' ? 'text-red-500' : 'text-gray-500'
+                               }>
+                                   {item.sentiment.toUpperCase()}
+                               </span>
+                               
+                               {/* Tooltip for AI Reasoning */}
+                               {item.sentiment_reasoning && (
+                                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-900 text-white text-[10px] leading-tight normal-case rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 shadow-xl">
+                                       {item.sentiment_reasoning}
+                                       <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                                   </div>
+                               )}
+                           </div>
+                       </>
+                   )}
+
                    {isHighlyRelevant && (
                        <>
                            <span className="w-1 h-1 rounded-full bg-black/10"></span>
